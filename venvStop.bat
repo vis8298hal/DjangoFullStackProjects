@@ -1,1 +1,0 @@
-DjangoDev\Scripts\deactivate
