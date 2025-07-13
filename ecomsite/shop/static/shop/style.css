@@ -1,0 +1,19 @@
+.card-text{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.print_price{
+    color: red;
+    font-weight: 40;
+    text-decoration: line-through;
+    font-size: 20px;
+}
+.final_price{
+    color: green;
+    font-weight: 80;
+    text-decoration: none;
+    font-size: 16px;
+}
+.card-title{
+    font-weight: 900;
+    font-size: 24px;
+}

@@ -6,19 +6,22 @@ from django.template import loader
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView
+from django.contrib.auth.decorators import login_required
 # Create your views here.
-"""
+
+@login_required
 def index(request):
     item_list = Item.objects.all()
     #template = loader.get_template('food/index.html')
     context = {'Item_list': item_list}
     return render(request,'food/index.html',context)
-"""
-class IndexClassView(ListView):
+
+ 
+"""class IndexClassView(ListView):
     model = Item
     template_name = 'food/index.html'
     context_object_name = 'Item_list'
-    
+"""    
 def item(request):
     return HttpResponse("<h1>This is an Item</h1>")
 """

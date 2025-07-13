@@ -3,7 +3,8 @@ from . import views
 app_name = 'food'
 
 urlpatterns = [
-    path('', views.IndexClassView.as_view(), name='index'),
+    #path('', views.IndexClassView.as_view(), name='index'),
+    path('', views.index, name='index'),
     path('item/', views.item, name='item'),
     path('detail/<int:pk>', views.FoodDetail.as_view(), name="detail"),
     path('add/', views.CreateItem.as_view(), name="create_item"),

@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title_static%}
+    <title>ecomSite| Order Builder</title>
+    <link rel="stylesheet" href="{% static 'shop/style.css' %}">
+{% endblock %}
+  
+ {% block body %}
+ <div class="container mt-10">
+        <div class="row mt-5">
+            <div class="col-md-12">
+                <form class="card card-sm">
+                    <div class="card-body row no-gutters align-items-center">
+                        <div class="col">
+                            <input type="search" placeholder="Search for a Product" name="item_name" class="form-control form-control-borderless">
+                        </div>
+                        <div class="col-auto">
+                            <button type="submit" class="btn btn-success">Search</button>
+                        </div>
+                    </div>
+                </form>
+            </div> 
+        </div> 
+    <div class="row mt-5 align-items-center">
+        {% for product in product_list%}
+        <div class="col-md-3 mt-5">
+            <div class"card product-card" style="border: 1px solid rgba(189, 177, 177, 0.7)">
+                <img src="{{product.image}}" class="card-img-top" height="150px", width="150px"/>
+                <div class"card-body">
+                    <div class="card-title">
+                        {{product.title}}
+                    </div>
+                    <div class="card-text">
+                        <p class="print_price">${{product.price}}</p>
+                        <p class="final_price">${{product.discount_price}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
