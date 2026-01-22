@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Raga | Welcome {% endblock %}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'homepage/css/base.css' %}">
+    <link rel="shortcut icon" href="{% static 'homepage/images/favicon.png' %}"
+</head>
+<body>
+    
+    <div class="container">
+        <div class="landing">
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="{% static 'homepage/images/logo.png' %}" alt="Flute">
+                    <span>Raga</span>
+                </div>
+                <div class="navigation">
+                    <a href="#" class="navEl active">Home<img src="{% static 'homepage/images/logo.png' %}" alt="Flute"></a>
+                    <a href="#" class="navEl">Tutorials<img src="{% static 'homepage/images/logo.png' %}" alt="Flute"></a>
+                    <a href="#" class="navEl">Practice<img src="{% static 'homepage/images/logo.png' %}" alt="Flute"></a>
+                </div>
+            </nav>
+            <div class="banner">
+                <div class="lamp"></div>
+                <div class="shade"></div>
+                <div class="bulb"></div>
+                <div class="light"></div>
+                <div class="shadow"></div>
+            </div>
+            <h1 class="banner-heading-main">Learn</h1>
+            <h2 class="banner-heading">Flute Practice</h2>
+            <p class="banner-paragraph">Flute & Music Practice</p>
+        </div>
+    </div>
+    <hr>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <hr>
+    <footer>
+        <p>&copy; 2026 Raga</p>
+    </footer>
+
+    <script src="{% static 'homepage/js/base.js' %}"></script>
+</body>
+</html>
